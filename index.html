@@ -122,8 +122,6 @@
 
                     colorRoutes();
 
-                    map.fitBounds(routeLine2.getBounds());
-
                     function colorRoutes() {
                         const routes = [
                             {
@@ -147,6 +145,7 @@
                         routes[0].line.setStyle({
                             color: "green"
                         });
+                        map.fitBounds(routes[0].line.getBounds());
 
                         // Middle
                         routes[1].line.setStyle({
